@@ -1,14 +1,13 @@
-// CART SYSTEM
 let cart = [];
 
 function addToCart(){
-cart.push("item");
-alert("Added to cart!");
+cart.push("product");
+alert("Product added to cart!");
 console.log(cart);
 }
 
-// SEARCH FILTER (basic)
-document.addEventListener("input", function(e){
+// SEARCH FILTER
+document.addEventListener("input", function(){
 let value = document.getElementById("search").value.toLowerCase();
 let cards = document.querySelectorAll(".card");
 
