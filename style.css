@@ -7,6 +7,13 @@ font-family:Arial;
 
 body{
 background:#f5f5f5;
+transition:0.3s;
+}
+
+/* DARK MODE */
+body.dark{
+background:#111;
+color:white;
 }
 
 /* HEADER */
@@ -21,27 +28,18 @@ flex-wrap:wrap;
 }
 
 .logo{
-font-size:20px;
 font-weight:bold;
 }
 
-header input{
-padding:8px;
-border:none;
-border-radius:5px;
-width:200px;
-}
-
-/* NAV */
 nav a{
 color:white;
-margin:0 10px;
+margin:5px;
 text-decoration:none;
 font-weight:bold;
 }
 
-nav a:hover{
-text-decoration:underline;
+.menu{
+display:none;
 }
 
 /* HERO */
@@ -49,32 +47,12 @@ text-decoration:underline;
 background:linear-gradient(to right,#ff6a00,#ff9900);
 color:white;
 text-align:center;
-padding:80px 20px;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-margin:10px 0;
-font-size:18px;
-}
-
-.hero button{
-margin-top:10px;
-padding:10px 25px;
-border:none;
-background:white;
-color:#ff5a00;
-border-radius:5px;
-cursor:pointer;
-font-weight:bold;
+padding:70px;
 }
 
 /* PRODUCTS */
 .section{
-padding:40px;
+padding:30px;
 text-align:center;
 }
 
@@ -83,7 +61,6 @@ display:flex;
 gap:20px;
 flex-wrap:wrap;
 justify-content:center;
-margin-top:20px;
 }
 
 .card{
@@ -92,11 +69,10 @@ padding:15px;
 width:220px;
 border-radius:10px;
 box-shadow:0 0 10px rgba(0,0,0,0.1);
-transition:0.3s;
 }
 
-.card:hover{
-transform:scale(1.05);
+body.dark .card{
+background:#222;
 }
 
 .card img{
@@ -105,13 +81,30 @@ border-radius:10px;
 }
 
 .card button{
-margin-top:10px;
-padding:8px;
+margin-top:5px;
+padding:5px 10px;
 background:#ff5a00;
 color:white;
 border:none;
-border-radius:5px;
 cursor:pointer;
+}
+
+/* BOX (cart/wishlist/contact) */
+.box{
+display:none;
+position:fixed;
+top:80px;
+right:20px;
+background:white;
+padding:15px;
+width:200px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+}
+
+body.dark .box{
+background:#333;
+color:white;
 }
 
 /* FOOTER */
@@ -120,5 +113,4 @@ background:#222;
 color:white;
 text-align:center;
 padding:20px;
-margin-top:40px;
 }
