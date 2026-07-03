@@ -15,13 +15,38 @@
 
 <input type="text" id="search" placeholder="Search products...">
 
-<nav>
+<div class="menu">
+<a href="#" onclick="toggleMenu()">☰ Menu</a>
+</div>
+
+<nav id="nav">
 <a href="#">Home</a>
 <a href="#">Products</a>
-<a href="#">Cart</a>
-<a href="#">Login</a>
+<a href="#" onclick="toggleCart()">🛒 Cart</a>
+<a href="#" onclick="toggleWishlist()">❤️ Wishlist</a>
+<a href="#" onclick="toggleDark()">🌙 Dark</a>
+<a href="#" onclick="showContact()">Contact</a>
 </nav>
 </header>
+
+<!-- CONTACT -->
+<div id="contactBox" class="box">
+<p>📞 Phone: +11288002845</p>
+<p>📧 Email: support@usadigitalzone.com</p>
+<a href="https://wa.me/11288002845" target="_blank">WhatsApp</a>
+</div>
+
+<!-- CART -->
+<div id="cartBox" class="box">
+<h3>Cart</h3>
+<ul id="cartList"></ul>
+</div>
+
+<!-- WISHLIST -->
+<div id="wishBox" class="box">
+<h3>Wishlist</h3>
+<ul id="wishList"></ul>
+</div>
 
 <section class="hero">
 <h1>Best Digital Store</h1>
@@ -32,30 +57,27 @@
 <section class="section">
 <h2>Products</h2>
 
-<div class="cards">
+<div class="cards" id="productList">
 
 <div class="card">
 <img src="https://picsum.photos/300/200?1">
 <h3>Bank Account</h3>
-<button onclick="addToCart()">Add to Cart</button>
+<button onclick="addCart('Bank Account')">Add Cart</button>
+<button onclick="addWish('Bank Account')">❤️</button>
 </div>
 
 <div class="card">
 <img src="https://picsum.photos/300/200?2">
 <h3>Crypto Wallet</h3>
-<button onclick="addToCart()">Add to Cart</button>
+<button onclick="addCart('Crypto Wallet')">Add Cart</button>
+<button onclick="addWish('Crypto Wallet')">❤️</button>
 </div>
 
 <div class="card">
 <img src="https://picsum.photos/300/200?3">
 <h3>Email Service</h3>
-<button onclick="addToCart()">Add to Cart</button>
-</div>
-
-<div class="card">
-<img src="https://picsum.photos/300/200?4">
-<h3>VPN Service</h3>
-<button onclick="addToCart()">Add to Cart</button>
+<button onclick="addCart('Email Service')">Add Cart</button>
+<button onclick="addWish('Email Service')">❤️</button>
 </div>
 
 </div>
